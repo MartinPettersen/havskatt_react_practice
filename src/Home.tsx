@@ -7,7 +7,6 @@ const Home = () => {
     <Parallax imageUrl={image}>
         <Description />
     </Parallax>
-
   );
 };
 
