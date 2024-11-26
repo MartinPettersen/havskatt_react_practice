@@ -14,3 +14,16 @@ export type DishType = {
   allergener: string,
   bilde: string
 }
+
+export type TableMapType = {
+fourSeatTableRowOne: TableType[];
+fourSeatTableRowTwo: TableType[];
+twoSeatTable: TableType[];
+longTable: TableType[];
+}
+
+export type TableType = {
+  id: string;
+  taken: boolean;
+  selected: boolean;
+};
