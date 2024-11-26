@@ -9,7 +9,7 @@ function Navbar() {
           <Link to="/" className="text-[#1c1c1c]">
             Hjem
           </Link>
-          <Link to="/" className="text-[#1c1c1c]">
+          <Link to="/menu" className="text-[#1c1c1c]">
             Meny
           </Link>
           <Link to="/" className="text-[#1c1c1c]">

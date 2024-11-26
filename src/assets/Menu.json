@@ -1,0 +1,89 @@
+{
+    "menues": [
+        {
+            "name": "Forretter",
+            "retter": [
+                {
+                    "navn": "Blåskjell i hvitvinssaus",
+                    "pris": "129",
+                    "beskrivelse": "Dampede blåskjell i en kremet hvitvinssaus, servert med ferskt brød.",
+                    "allergener": "Bløtdyr, melk, hvete (gluten)",
+                    "bilde": "Blåskjell_i_hvitvinssaus.jpg"
+                },
+                {
+                    "navn": "Røkt laks på rugbrød",
+                    "pris": "115",
+                    "beskrivelse": "Fersk røkt laks på sprøtt rugbrød, servert med dill, sitron og kapers.",
+                    "allergener": "Fisk, hvete (gluten)",
+                    "bilde": "Røkt_laks_på_rugbrød.jpg"
+                },
+                {
+                    "navn": "Scampi med hvitløk og chili",
+                    "pris": "139",
+                    "beskrivelse": "Grillet scampi i en blanding av hvitløk og chili, servert med lime og koriander.",
+                    "allergener": "Skalldyr",
+                    "bilde": "Scampi_med_hvitløk_og_chili.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Hovedretter",
+            "retter": [
+                {
+                    "navn": "Grillet laks med urtesmør",
+                    "pris": "245",
+                    "beskrivelse": "Saftig grillet laks servert med potetpuré, asparges og en smørsaus med friske urter.",
+                    "allergener": "Fisk, melk",
+                    "bilde": "Grillet_laks_med_urtesmør.jpg"
+                },
+                {
+                    "navn": "Hummer Thermidor",
+                    "pris": "379",
+                    "beskrivelse": "Gratinerte hummerhaler med en kremet sopp- og sennepssaus, servert med grønnsaker og ris.",
+                    "allergener": "Skalldyr, melk, egg, sennep",
+                    "bilde": "Hummer_Thermidor.jpg"
+                },
+                {
+                    "navn": "Stekt torsk med ertepuré",
+                    "pris": "265",
+                    "beskrivelse": "Panert torsk servert med smørdampede grønnsaker, ertepuré og mandelpoteter.",
+                    "allergener": "Fisk, melk, hvete (gluten)",
+                    "bilde": "Stekt_torsk_med_ertepuré.jpg"
+                },
+                {
+                    "navn": "Fiskesuppe med safran",
+                    "pris": "210",
+                    "beskrivelse": "Kremet fiskesuppe med fersk torsk, laks, blåskjell og safran, servert med brød.",
+                    "allergener": "Fisk, melk, bløtdyr, hvete (gluten)",
+                    "bilde": "Fiskesuppe_med_safran.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Desserter",
+            "retter": [
+                {
+                    "navn": "Sitronterte med marengs",
+                    "pris": "95",
+                    "beskrivelse": "Syrlig sitronterte med sprø bunn og fløyelsmyk marengs.",
+                    "allergener": "Egg, hvete (gluten), melk",
+                    "bilde": "Sitronterte_med_marengs.jpg"
+                },
+                {
+                    "navn": "Sjokolademousse med havsalt",
+                    "pris": "105",
+                    "beskrivelse": "Fyldig sjokolademousse toppet med et hint av havsalt og friske bær.",
+                    "allergener": "Melk, egg",
+                    "bilde": "Sjokolademousse_med_havsalt.jpg"
+                },
+                {
+                    "navn": "Crème Brûlée med vanilje",
+                    "pris": "115",
+                    "beskrivelse": "Klassisk crème brûlée med en knasende karamellisert topp og ekte vaniljesmak.",
+                    "allergener": "Egg, melk",
+                    "bilde": "Crème_Brûlée_med_vanilje.jpg"
+                }
+            ]
+        }
+    ]
+}
