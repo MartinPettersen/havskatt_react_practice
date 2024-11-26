@@ -12,7 +12,7 @@ const OrderTable = () => {
     fourSeatTableRowOne: [
       {
         id: "f1",
-        taken: false,
+        taken: true,
         selected: false,
       },
       {
