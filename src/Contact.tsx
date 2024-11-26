@@ -14,7 +14,6 @@ const Contant = () => {
       <div className="flex item-end justify-center">
         <div className="flex items-center  justify-center  w-[70%] ">
           <div className="flex flex-col space-y-4"> 
-
           <p>Telefon: 999 999 99</p>
           <p>E-post: HavSkatt@gmail.com</p>
           <p>Adresse: Fiskebryggen 12, 0150 Oslo.</p>
@@ -38,9 +37,11 @@ const Contant = () => {
             value = {email}
             onChange={e => setEmail(e.target.value)}/>
           </div>
-          <div className="bg-[#4A90E2] p-4 flex items-center justify-center">
-            <p className="font-bold text-lg">Send</p>
-          </div>
+          <div className="w-full flex items-center justify-center pt-8">
+              <div className="bg-[#4A90E2] p-2 flex items-center justify-center w-[66%]">
+                <p className="font-bold text-lg">Send</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

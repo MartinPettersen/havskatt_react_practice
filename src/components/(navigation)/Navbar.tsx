@@ -12,7 +12,7 @@ function Navbar() {
           <Link to="/menu" className="text-[#1c1c1c]">
             Meny
           </Link>
-          <Link to="/" className="text-[#1c1c1c]">
+          <Link to="/ordertable" className="text-[#1c1c1c]">
             Bestill
           </Link>
           <Link to="/about" className="text-[#1c1c1c]">
