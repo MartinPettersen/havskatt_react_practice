@@ -3,39 +3,42 @@ import Parallax from "../(utils)/Parallax";
 import { DishType } from "../../utils/Types";
 
 type Props = {
-    dish: DishType;
+  dish: DishType;
 };
 
 const Dish = ({ dish }: Props) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
 
-    const [imageUrl, setImageurl] = useState<string | null>(null);
+  useEffect(() => {
+    const getImage = async () => {
+      try {
+        const imagePath = `../../assets/${dish.bilde}`;
+        const imageModule = await import(/* @vite-ignore */ imagePath);
+        setImageUrl(imageModule.default);
+      } catch (error) {
+        console.error(`Error loading image: ${dish.bilde}`, error);
+        setImageUrl(null);
+      }
+    };
 
-    useEffect(() => {
+    getImage();
+  }, [dish.bilde]);
 
-        const getImage = async () => {
-
-            const images = import.meta.glob<Record<string, string>>("../assets/*.{png,jpg,jpeg,svg}");
-            const imageKey = `../assets/${dish.bilde}`;
-            
-            if (images[imageKey]) {
-                const temp = await images[imageKey]
-                setImageurl(temp.default || temp)
-                
-            } else {
-                setImageurl(null)
-            }
-        }
-
-        getImage()
-    })
+  if (imageUrl === null) {
+    return (
+      <div>loading</div>
+    )
+  }
 
   return (
     <Parallax imageUrl={imageUrl}>
-      <div>
-        <h3>{dish.navn}</h3>
-        <p>{dish.beskrivelse}</p>
-        <p>Allergener: {dish.allergener}</p>
-        <p>{dish.pris} kr</p>
+      <div className="w-full flex items-center justify-center">
+        <div>
+          <h3 className="font-bold text-lg">{dish.navn}</h3>
+          <p>{dish.beskrivelse}</p>
+          <p>Allergener: {dish.allergener}</p>
+          <p>{dish.pris} kr</p>
+        </div>
       </div>
     </Parallax>
   );

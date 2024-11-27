@@ -5,6 +5,11 @@ export default {
   ],
   theme: {
     extend: {},
+    extend: {
+      colors: {
+        coralRed: '#FF6F61',
+      },
+    },
   },
   plugins: [],
   safelist: [

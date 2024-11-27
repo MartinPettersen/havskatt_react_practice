@@ -5,7 +5,7 @@ function Navbar() {
     <>
       <div className="flex flex-col items-center z-50 fixed w-full">
         <h1 className="text-[#FF6F61] text-4xl md:text-8xl">Havets Skatter</h1>
-        <div className="bg-[#FF6F61] flex flex-col md:flex-row p-4 justify-center items-center md:justify-evenly  w-full md:w-[50%]">
+        <div className="bg-gradient-to-r from-transparent via-coralRed to-transparent flex flex-col md:flex-row p-4 justify-center items-center md:justify-evenly  w-full md:w-[50%]">
           <Link to="/" className="text-[#1c1c1c]">
             Hjem
           </Link>
