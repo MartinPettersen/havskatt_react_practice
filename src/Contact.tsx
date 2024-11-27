@@ -38,14 +38,14 @@ const Contant = () => {
             onChange={e => setEmail(e.target.value)}/>
           </div>
           <div className="w-full flex items-center justify-center pt-8">
-              <div className="bg-[#4A90E2] p-2 flex items-center justify-center w-[66%]">
+              <button className="bg-[#4A90E2] p-2 flex items-center justify-center w-[66%]">
                 <p className="font-bold text-lg">Send</p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </Parallax>
+    </Parallax> 
   );
 };
 
