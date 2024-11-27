@@ -6,10 +6,14 @@ import Home from "./Home.tsx";
 import Contact from "./Contact.tsx";
 import Menu from "./Views/Menu.tsx";
 import OrderTable from "./Views/OrderTable.tsx";
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <>
+    <Helmet>
+    <html lang="nb" />
+    </Helmet>
       <div className=" w-full">
         <Navbar />
       </div>

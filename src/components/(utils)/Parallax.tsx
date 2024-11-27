@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   imageUrl: string;
   children: React.ReactNode;
-  altText: string
+  altText: string;
 };
 
 const Parallax = ({ imageUrl, children, altText }: Props) => {
@@ -16,11 +16,7 @@ const Parallax = ({ imageUrl, children, altText }: Props) => {
           }}
           className="relative min-h-screen w-full bg-fixed bg-center bg-no-repeat bg-cover"
         >
-          <img
-    src={imageUrl}
-    alt={altText}
-    className="sr-only"
-  />
+          <img src={imageUrl} alt={altText} className="sr-only" />
         </div>
         <div className="bg-[#F4E5C3] py-20">{children}</div>
       </div>
