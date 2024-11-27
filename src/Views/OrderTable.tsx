@@ -80,7 +80,7 @@ const OrderTable = () => {
   });
 
   return (
-    <Parallax imageUrl={image}>
+    <Parallax imageUrl={image} altText="Bilde av festglade mennesker som sitter rundt et bord">
       <div className="flex item-end justify-center">
         <div className="flex items-center  justify-center  w-[70%] ">
           <div className="flex flex-col space-y-4">

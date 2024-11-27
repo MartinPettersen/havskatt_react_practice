@@ -10,7 +10,7 @@ const Contant = () => {
   const [email, setEmail] = useState("")
 
   return (
-    <Parallax imageUrl={image}>
+    <Parallax imageUrl={image} altText="Pen kvinne holder kamera personen i hånden">
       <div className="flex item-end justify-center">
         <div className="flex items-center  justify-center  w-[70%] ">
           <div className="flex flex-col space-y-4"> 

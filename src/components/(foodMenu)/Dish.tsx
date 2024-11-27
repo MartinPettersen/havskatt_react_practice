@@ -31,7 +31,7 @@ const Dish = ({ dish }: Props) => {
   }
 
   return (
-    <Parallax imageUrl={imageUrl}>
+    <Parallax imageUrl={imageUrl} altText={`Bilde av ${dish.navn}`}>
       <div className="w-full flex items-center justify-center">
         <div>
           <h3 className="font-bold text-lg">{dish.navn}</h3>
