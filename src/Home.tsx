@@ -4,7 +4,7 @@ import Parallax from "./components/(utils)/Parallax";
 
 const Home = () => {
   return (
-    <Parallax imageUrl={image}>
+    <Parallax imageUrl={image} altText="Pen kvinne sitter i en restaurant ved havet">
         <Description />
     </Parallax>
   );

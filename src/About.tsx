@@ -10,13 +10,10 @@ const About = () => {
     ]
 
   return (
-    <Parallax imageUrl={image}>
+    <Parallax imageUrl={image} altText="En oppblåsbar flammingo i havet">
         <div className='flex item-end justify-center'>
         <div className='flex items-center  justify-center flex-col space-y-4 w-[70%] '>
-
         {texts.map((text, i) => (
-
-            
             <p key={i} className='text-lg'>{text}</p>
         )
         )}

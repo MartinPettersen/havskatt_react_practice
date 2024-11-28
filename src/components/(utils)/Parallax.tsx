@@ -8,13 +8,14 @@ type Props = {
 
 const Parallax = ({ imageUrl, children, altText }: Props) => {
   return (
-    <div className="flex flex-col items-center w-full  z-0">
+    <section className="flex flex-col items-center w-full  z-0">
       <div className="w-full overflow-hidden">
         <div
           style={{
             backgroundImage: `url(${imageUrl})`,
           }}
           className="relative min-h-screen w-full bg-fixed bg-center bg-no-repeat bg-cover"
+          role="presentation"
         >
           <img src={imageUrl} alt={altText} className="sr-only" />
         </div>
@@ -25,8 +26,9 @@ const Parallax = ({ imageUrl, children, altText }: Props) => {
           backgroundImage: `url(${imageUrl})`,
         }}
         className="relative min-h-screen w-full bg-fixed bg-center bg-no-repeat bg-cover"
+        role="presentation"
       ></div>
-    </div>
+    </section>
   );
 };
 
