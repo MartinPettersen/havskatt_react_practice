@@ -11,25 +11,53 @@ type Props = {
 
 const TableMap = ({ tableMap }: Props) => {
   return (
-    <div className="bg-slate-700 rounded-sm w-full h-[400px] flex flex-col items-center justify-evenly">
-      <div className="flex justify-evenly w-full">
+    <div
+      role="region"
+      aria-labelledby="Bord Kart"
+      className="bg-slate-700 rounded-sm w-full h-[400px] flex flex-col items-center justify-evenly"
+    >
+
+      <h2 id="bord-kart" className="sr-only">
+        Bord Kart
+      </h2>
+      <div className="flex justify-evenly w-full" role="group" aria-labelledby="Fire-setter-bord-rad-en">
+        <h3 id="Fire-setter-bord-rad-en" className="sr-only">
+        Fire setter bord rad en
+        </h3>
         {tableMap.fourSeatTableRowOne.map((table, i) => (
-          <FourSeatTable key={i} taken={table.taken} selected={table.selected}/>
+          <FourSeatTable
+            key={i}
+            taken={table.taken}
+            selected={table.selected}
+          />
         ))}
       </div>
-      <div className="flex justify-evenly w-full">
+      <div className="flex justify-evenly w-full" role="group" aria-labelledby="Fire-setter-bord-rad-to">
+        <h3 id="Fire-setter-bord-rad-to" className="sr-only">
+        Fire setter bord rad to
+        </h3>
         {tableMap.fourSeatTableRowTwo.map((table, i) => (
-          <FourSeatTable key={i} taken={table.taken} selected={table.selected}/>
+          <FourSeatTable
+            key={i}
+            taken={table.taken}
+            selected={table.selected}
+          />
         ))}
       </div>
-      <div className="flex justify-evenly w-full">
+      <div className="flex justify-evenly w-full" role="group" aria-labelledby="to-setter-bord">
+      <h3 id="to-setter-bord" className="sr-only">
+        To setter bord
+        </h3>
         {tableMap.twoSeatTable.map((table, i) => (
-          <TwoSeatTable key={i} taken={table.taken} selected={table.selected}/>
+          <TwoSeatTable key={i} taken={table.taken} selected={table.selected} />
         ))}
       </div>
-      <div className="flex justify-evenly w-full">
+      <div className="flex justify-evenly w-full" role="group" aria-labelledby="lang-bord">
+      <h3 id="lang-bord" className="sr-only">
+        Lang bord
+        </h3>
         {tableMap.longTable.map((table, i) => (
-          <LongTable key={i} taken={table.taken} selected={table.selected}/>
+          <LongTable key={i} taken={table.taken} selected={table.selected} />
         ))}
       </div>
     </div>
