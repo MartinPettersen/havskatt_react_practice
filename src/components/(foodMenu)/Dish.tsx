@@ -33,11 +33,11 @@ const Dish = ({ dish }: Props) => {
   return (
     <Parallax imageUrl={imageUrl} altText={`Bilde av ${dish.navn}`}>
       <div className="w-full flex items-center justify-center">
-        <div>
+        <div >
           <h3 className="font-bold text-lg">{dish.navn}</h3>
           <p>{dish.beskrivelse}</p>
-          <p>Allergener: {dish.allergener}</p>
-          <p>{dish.pris} kr</p>
+          <p><strong>Allergener:</strong> {dish.allergener}</p>
+          <p aria-label="Pris">{dish.pris} kr</p>
         </div>
       </div>
     </Parallax>
