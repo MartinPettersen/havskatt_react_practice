@@ -16,10 +16,10 @@ export type DishType = {
 }
 
 export type TableMapType = {
-fourSeatTableRowOne: TableType[];
-fourSeatTableRowTwo: TableType[];
-twoSeatTable: TableType[];
-longTable: TableType[];
+  fourSeatTableRowOne: TableType[];
+  fourSeatTableRowTwo: TableType[];
+  twoSeatTable: TableType[];
+  longTable: TableType[];
 }
 
 export type TableType = {
