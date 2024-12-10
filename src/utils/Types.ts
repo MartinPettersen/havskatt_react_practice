@@ -27,3 +27,14 @@ export type TableType = {
   taken: boolean;
   selected: boolean;
 };
+
+export type Reservation = {
+  reservationId: string,
+  name: string,
+  email: string,
+  date: string,
+  time: string,
+  tableId: string,
+  status: string,
+  phone: number
+}
