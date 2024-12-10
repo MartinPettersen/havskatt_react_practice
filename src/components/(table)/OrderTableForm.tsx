@@ -15,7 +15,6 @@ const OrderTableForm = ({ date, tableId }: Props) => {
   const navigate = useNavigate()
 
   const submitOrder = async () => {
-    console.log("submitting order");
     const url = import.meta.env.VITE_URL;
     const apiToken = import.meta.env.VITE_API_TOKEN;
 
@@ -84,7 +83,9 @@ const OrderTableForm = ({ date, tableId }: Props) => {
       </div>
       <div className="w-full flex items-center justify-center pt-8">
         <button
-          onClick={() => submitOrder()}
+          onClick={(e) => {
+            e.preventDefault(); 
+            submitOrder()}}
           className="bg-[#4A90E2] p-2 flex items-center justify-center w-[66%]"
         >
           <p className="font-bold text-lg">Bestill</p>

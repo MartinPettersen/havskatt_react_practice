@@ -1,13 +1,33 @@
-import React from "react";
-import menu from "../assets/Menu.json";
+import React, { useEffect, useState } from "react";
 import Dish from "../components/(foodMenu)/Dish";
-
+import axios from "axios";
+import { course } from "../utils/Types";
 const Menu = () => {
-  console.log("menu", menu["menues"][0]);
+
+  const [menues, setMenues] = useState<course[]>([])
+
+  useEffect(() => {
+    const apiToken = import.meta.env.VITE_API_TOKEN; 
+    const url = import.meta.env.VITE_URL
+    axios
+      .get(`${url}menues`, {
+        headers: {
+          'api_token': apiToken, 
+        }
+      })
+      .then((response) => {
+        console.log(response.data);
+        setMenues(response.data)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
 
   return (
     <div className="flex flex-col space-y-8 items-center w-full py-48  justify-center flex-grow ">
-      {menu["menues"].map((course, i) => (
+      {menues.map((course, i) => (
         <section
           key={i}
           className="w-[80%] md:w-[100%]"

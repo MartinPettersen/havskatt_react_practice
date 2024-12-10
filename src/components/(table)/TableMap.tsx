@@ -14,7 +14,6 @@ type Props = {
 
 const TableMap = ({ tableMap, selectedTable,setSelectedTable, reservations }: Props) => {
   
-  console.log("reservations", reservations)
 
   const checkIfTaken = (tableId: string) => {
     const match = reservations.find(reservation => reservation.tableId === tableId) 
