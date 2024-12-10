@@ -6,11 +6,10 @@ import TwoSeatTable from "../components/(table)/TwoSeatTable";
 import { Calendar } from "primereact/calendar";
 import axios from "axios";
 import { Reservation } from "../utils/Types";
+import OrderTableForm from "../components/(table)/OrderTableForm";
 
 const OrderTable = () => {
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [name, setName] = useState("");
+
   const [selectedTable, setSelectedTable] = useState("");
   const [reservations, setReservations] = useState<Reservation[]>([]);
 
@@ -90,15 +89,15 @@ const OrderTable = () => {
     ],
   });
 
-  const url =
-    "https://havskatt-backend-practice.onrender.com/api/reservations?date=";
+  
 
   useEffect(() => {
     const tempDate = date.toLocaleDateString('no').replace(/(\d{2})\.(\d{2})\.(\d{4})/, '$1/$2/' + '$3'.slice(-2))
     const apiToken = import.meta.env.VITE_API_TOKEN; 
+    const url = import.meta.env.VITE_URL
     console.log("we get called with ", tempDate)
     axios
-      .get(`${url}${tempDate}`, {
+      .get(`${url}reservations?date=${tempDate}`, {
         headers: {
           'api_token': apiToken, 
         }
@@ -184,42 +183,7 @@ const OrderTable = () => {
               setSelectedTable={setSelectedTable}
               reservations={reservations}
             />
-            <p>Du vil få tilsendt bekreftelse på E-post og SMS</p>
-            <div>
-              <p>Navn:</p>
-              <input
-                className="w-full "
-                placeholder="Ditt Navn"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <p>E-post:</p>
-              <input
-                className="w-full "
-                placeholder="Din epost"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <p>Telefon</p>
-              <input
-                className="w-full "
-                placeholder="Ditt Telefon Nummer"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
-              />
-            </div>
-            <div className="w-full flex items-center justify-center pt-8">
-              <button className="bg-[#4A90E2] p-2 flex items-center justify-center w-[66%]">
-                <p className="font-bold text-lg">Bestill</p>
-              </button>
-            </div>
+            <OrderTableForm date={date} tableId={selectedTable}/>
           </div>
         </div>
       </div>
