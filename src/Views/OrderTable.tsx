@@ -94,10 +94,11 @@ const OrderTable = () => {
     "https://havskatt-backend-practice.onrender.com/api/reservations?date=";
 
   useEffect(() => {
-    const temp = "09/12/2024";
+    const tempDate = date.toLocaleDateString('no').replace(/(\d{2})\.(\d{2})\.(\d{4})/, '$1/$2/' + '$3'.slice(-2))
     const apiToken = import.meta.env.VITE_API_TOKEN; 
+    console.log("we get called with ", tempDate)
     axios
-      .get(`${url}${temp}`, {
+      .get(`${url}${tempDate}`, {
         headers: {
           'api_token': apiToken, 
         }
@@ -109,7 +110,7 @@ const OrderTable = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [date]);
 
   return (
     <Parallax
