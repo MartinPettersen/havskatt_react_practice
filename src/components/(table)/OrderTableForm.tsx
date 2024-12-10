@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   date: Date;
@@ -10,6 +11,8 @@ const OrderTableForm = ({ date, tableId }: Props) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
+
+  const navigate = useNavigate()
 
   const submitOrder = async () => {
     console.log("submitting order");
@@ -29,7 +32,9 @@ const OrderTableForm = ({ date, tableId }: Props) => {
       phone: phoneNumber,
     };
 
-    axios
+    try {
+
+      axios
       .post(`${url}reservation`, reservation, {
         headers: {
           api_token: apiToken,
@@ -37,7 +42,11 @@ const OrderTableForm = ({ date, tableId }: Props) => {
       })
       .then((response) => {
         console.log("response", response.data);
+        navigate("/")
       });
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (
