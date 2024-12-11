@@ -1,4 +1,3 @@
-import React from "react";
 import image from "./assets/Gemini_Generated_Image_ekbx5oekbx5oekbx.jpg";
 import Parallax from "./components/(utils)/Parallax";
 

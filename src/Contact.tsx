@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Parallax from "./components/(utils)/Parallax";
 import image from "./assets/yoann-boyer-VZSIm_cNAL8-unsplash.jpg";
 import map from "./assets/bestmap.png";

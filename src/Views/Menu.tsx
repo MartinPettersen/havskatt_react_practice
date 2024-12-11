@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Dish from "../components/(foodMenu)/Dish";
 import axios from "axios";
 import { course } from "../utils/Types";

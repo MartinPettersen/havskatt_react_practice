@@ -1,4 +1,3 @@
-import React from "react";
 import FourSeatTable from "./FourSeatTable";
 import TwoSeatTable from "./TwoSeatTable";
 import LongTable from "./LongTable";

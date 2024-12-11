@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Parallax from "../components/(utils)/Parallax";
 import image from "../assets/al-elmes-ULHxWq8reao-unsplash.jpg";
 import TableMap from "../components/(table)/TableMap";
