@@ -26,7 +26,7 @@ const Dish = ({ dish }: Props) => {
 
   if (imageUrl === null) {
     return (
-      <div>loading</div>
+      <div className="w-full flex items-center justify-center">loading</div>
     )
   }
 
