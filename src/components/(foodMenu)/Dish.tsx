@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Parallax from "../(utils)/Parallax";
 import { DishType } from "../../utils/Types";
 
@@ -7,23 +6,7 @@ type Props = {
 };
 
 const Dish = ({ dish }: Props) => {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    const getImage = async () => {
-      try {
-        const imagePath = `../../assets/${dish.bilde}`;
-        const imageModule = await import(/* @vite-ignore */ imagePath);
-        setImageUrl(imageModule.default);
-      } catch (error) {
-        console.error(`Error loading image: ${dish.bilde}`, error);
-        setImageUrl(null);
-      }
-    };
-
-    getImage();
-  }, [dish.bilde]);
-
+  const imageUrl = `/images/${dish.bilde}`;
   if (imageUrl === null) {
     return (
       <div className="w-full flex items-center justify-center">loading</div>
